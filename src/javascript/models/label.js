@@ -4,3 +4,5 @@ class Label {
         this.description = inputObject.description;
     }
 }
+
+export default Label;

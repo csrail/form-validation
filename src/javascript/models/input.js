@@ -5,3 +5,5 @@ class Input {
         this.description = description;
     }
 }
+
+export default Input;
