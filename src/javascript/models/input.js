@@ -1,8 +1,8 @@
 class Input {
-    constructor(type, id, description) {
-        this.type = type;
-        this.id = id;
-        this.description = description;
+    constructor(inputDataObject) {
+        this.type = inputDataObject.type;
+        this.id = inputDataObject.id;
+        this.description = inputDataObject.description;
     }
 }
 
