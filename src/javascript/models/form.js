@@ -1,7 +1,7 @@
 class Form {
-    constructor(name, ...inputs) {
-        this.name = name;
-        this.inputs = inputs;
+    constructor(formDataObject) {
+        this.name = formDataObject.name;
+        this.inputs = formDataObject.inputs;
     }
 }
 
