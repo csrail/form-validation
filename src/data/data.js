@@ -1,4 +1,4 @@
-const formDataObject = {
+const formData = {
     name: "registration",
     inputs: [
         {
@@ -27,4 +27,4 @@ const formDataObject = {
     ],
 };
 
-export default formDataObject;
+export default formData;
