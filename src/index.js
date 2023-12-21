@@ -10,13 +10,20 @@ import Inputs from "./javascript/models/inputs";
 
     form.inputs.forEach((input) => {
         const component = document.createElement("div");
+        const labelDivider = document.createElement("div");
+        const inputDivider = document.createElement("div");
+
+        const labelElement = document.createElement("label");
+        labelElement.textContent = input.labelObject.description;
 
         const inputElement = document.createElement("input");
         inputElement.type = input.type;
-        inputElement.textContent = input.name;
         inputElement.id = input.id;
 
-        component.appendChild(inputElement);
+        labelDivider.appendChild(labelElement);
+        inputDivider.appendChild(inputElement);
+        component.appendChild(labelDivider);
+        component.appendChild(inputDivider);
         fragment.appendChild(component);
     });
 
