@@ -1,7 +1,7 @@
 class Label {
-    constructor(inputObject) {
-        this.id = inputObject.id;
-        this.description = inputObject.description;
+    constructor(inputDataObject) {
+        this.id = inputDataObject.id;
+        this.description = inputDataObject.description;
     }
 }
 
