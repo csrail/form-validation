@@ -4,6 +4,7 @@ const formData = {
         {
             type: "text",
             id: "input-username",
+            name: "username",
             description: "username",
             validators: [
                 {
@@ -17,6 +18,7 @@ const formData = {
         {
             type: "email",
             id: "input-email",
+            name: "email",
             description: "email",
             validators: [
                 {
