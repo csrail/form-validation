@@ -15,6 +15,7 @@ import Inputs from "./javascript/models/inputs";
 
         const labelElement = document.createElement("label");
         labelElement.textContent = input.labelObject.description;
+        labelElement.setAttribute("for", input.labelObject.id);
 
         const inputElement = document.createElement("input");
         inputElement.type = input.type;
