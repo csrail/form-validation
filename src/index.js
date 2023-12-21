@@ -8,6 +8,9 @@ import Inputs from "./javascript/models/inputs";
 
     const fragment = document.createDocumentFragment();
 
+    const formElement = document.createElement("form");
+    formElement.id = form.id;
+
     form.inputs.forEach((input) => {
         const component = document.createElement("div");
         component.classList.add("input-line");
@@ -31,7 +34,8 @@ import Inputs from "./javascript/models/inputs";
         fragment.appendChild(component);
     });
 
-    document.body.appendChild(fragment);
+    formElement.append(fragment);
+    document.body.appendChild(formElement);
 
     return {};
 })();
