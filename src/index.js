@@ -19,6 +19,7 @@ import Inputs from "./javascript/models/inputs";
         const inputElement = document.createElement("input");
         inputElement.type = input.type;
         inputElement.id = input.id;
+        inputElement.setAttribute("name", input.name);
 
         labelDivider.appendChild(labelElement);
         inputDivider.appendChild(inputElement);
