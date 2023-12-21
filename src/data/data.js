@@ -1,4 +1,5 @@
 const formData = {
+    id: "registration-form",
     name: "registration",
     inputs: [
         {
