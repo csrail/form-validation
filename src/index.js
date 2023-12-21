@@ -10,6 +10,8 @@ import Inputs from "./javascript/models/inputs";
 
     form.inputs.forEach((input) => {
         const component = document.createElement("div");
+        component.classList.add("input-line");
+
         const labelDivider = document.createElement("div");
         const inputDivider = document.createElement("div");
 
