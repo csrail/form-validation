@@ -10,6 +10,11 @@ import Inputs from "./javascript/models/inputs";
 
     const formElement = document.createElement("form");
     formElement.id = form.id;
+    formElement.setAttribute("method", "POST");
+    formElement.setAttribute("action", "#");
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+    });
 
     form.inputs.forEach((input) => {
         const component = document.createElement("div");
@@ -34,7 +39,12 @@ import Inputs from "./javascript/models/inputs";
         fragment.appendChild(component);
     });
 
+    const submitInputElement = document.createElement("input");
+    submitInputElement.id = "form-submit";
+    submitInputElement.setAttribute("type", "submit");
+
     formElement.append(fragment);
+    formElement.append(submitInputElement);
     document.body.appendChild(formElement);
 
     return {};
