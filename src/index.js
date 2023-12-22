@@ -32,6 +32,10 @@ import Inputs from "./javascript/models/inputs";
         inputElement.id = input.id;
         inputElement.setAttribute("name", input.name);
 
+        input.validatorsObject.validators.forEach((validator) => {
+            inputElement.setAttribute(validator.attribute, validator.value);
+        });
+
         labelDivider.appendChild(labelElement);
         inputDivider.appendChild(inputElement);
         component.appendChild(labelDivider);
