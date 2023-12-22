@@ -1,6 +1,7 @@
 class Validator {
-    constructor(attribute) {
-        this.attribute = attribute;
+    constructor(validatorDataObject) {
+        this.attribute = validatorDataObject.attribute;
+        this.value = validatorDataObject.value;
     }
 }
 
