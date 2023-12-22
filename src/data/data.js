@@ -10,9 +10,11 @@ const formData = {
             validators: [
                 {
                     attribute: "required",
+                    value: "",
                 },
                 {
                     attribute: "minlength",
+                    value: 5,
                 },
             ],
         },
@@ -24,6 +26,7 @@ const formData = {
             validators: [
                 {
                     attribute: "required",
+                    value: "",
                 },
             ],
         },
