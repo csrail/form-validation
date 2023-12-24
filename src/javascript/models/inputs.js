@@ -6,10 +6,10 @@ class Inputs {
         this.inputs = Inputs.createInputObject(dataInputsObject);
     }
 
-    static createInputObject(dataInputObject) {
+    static createInputObject(dataInputsObject) {
         const collection = [];
 
-        dataInputObject.forEach((obj) => {
+        dataInputsObject.forEach((obj) => {
             collection.push(new Input(obj));
         });
 
