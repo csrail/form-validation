@@ -8,10 +8,10 @@ class Validators {
         );
     }
 
-    static createValidatorObjects(validatorDataObject) {
+    static createValidatorObjects(validatorsDataObject) {
         const collection = [];
 
-        validatorDataObject.forEach((validator) => {
+        validatorsDataObject.forEach((validator) => {
             collection.push(new Validator(validator));
         });
 
