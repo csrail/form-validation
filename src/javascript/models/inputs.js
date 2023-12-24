@@ -2,7 +2,6 @@ import Input from "./input";
 
 class Inputs {
     constructor(inputsDataObject) {
-        this.inputsDataObject = inputsDataObject;
         this.inputs = Inputs.createInputObject(inputsDataObject);
     }
 
