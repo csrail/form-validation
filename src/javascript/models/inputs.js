@@ -1,9 +1,9 @@
 import Input from "./input";
 
 class Inputs {
-    constructor(dataInputsObject) {
-        this.dataInputsObject = dataInputsObject;
-        this.inputs = Inputs.createInputObject(dataInputsObject);
+    constructor(inputsDataObject) {
+        this.inputsDataObject = inputsDataObject;
+        this.inputs = Inputs.createInputObject(inputsDataObject);
     }
 
     static createInputObject(dataInputsObject) {
