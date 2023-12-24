@@ -11,8 +11,8 @@ class Validators {
     static createValidatorObjects(validatorsDataObject) {
         const collection = [];
 
-        validatorsDataObject.forEach((validator) => {
-            collection.push(new Validator(validator));
+        validatorsDataObject.forEach((validatorDataObject) => {
+            collection.push(new Validator(validatorDataObject));
         });
 
         return collection;
