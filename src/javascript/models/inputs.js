@@ -10,7 +10,9 @@ class Inputs {
         const collection = [];
 
         dataInputsObject.forEach((dataInputObject) => {
-            collection.push(new Input(dataInputObject));
+            collection.push(
+                new Input(dataInputObject, dataInputObject.validators),
+            );
         });
 
         return collection;
