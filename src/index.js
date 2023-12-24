@@ -15,6 +15,12 @@ import Inputs from "./javascript/models/inputs";
         e.preventDefault();
     });
 
+    formElement.addEventListener("focusout", (event) => {
+        if (!event.target.checkValidity()) {
+            event.currentTarget.reportValidity();
+        }
+    });
+
     form.inputs.forEach((input) => {
         const component = document.createElement("div");
         component.classList.add("input-line");
