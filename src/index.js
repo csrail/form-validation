@@ -23,8 +23,8 @@ import Inputs from "./javascript/models/inputs";
         const inputDivider = document.createElement("div");
 
         const labelElement = document.createElement("label");
-        labelElement.textContent = input.labelObject.description;
-        labelElement.setAttribute("for", input.labelObject.id);
+        labelElement.textContent = input.label.description;
+        labelElement.setAttribute("for", input.label.id);
 
         const inputElement = document.createElement("input");
         inputElement.type = input.type;

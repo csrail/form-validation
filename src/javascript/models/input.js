@@ -6,7 +6,7 @@ class Input {
         this.type = inputDataObject.type;
         this.id = inputDataObject.id;
         this.name = inputDataObject.name;
-        this.labelObject = new Label(inputDataObject);
+        this.label = new Label(inputDataObject);
         this.validators = new Validators(validatorsDataObject).validators;
     }
 }
