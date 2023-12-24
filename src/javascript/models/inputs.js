@@ -5,12 +5,12 @@ class Inputs {
         this.inputs = Inputs.createInputsObject(inputsDataObject);
     }
 
-    static createInputsObject(dataInputsObject) {
+    static createInputsObject(inputsDataObject) {
         const collection = [];
 
-        dataInputsObject.forEach((dataInputObject) => {
+        inputsDataObject.forEach((inputDataObject) => {
             collection.push(
-                new Input(dataInputObject, dataInputObject.validators),
+                new Input(inputDataObject, inputDataObject.validators),
             );
         });
 
