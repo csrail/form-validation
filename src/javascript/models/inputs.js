@@ -3,10 +3,10 @@ import Input from "./input";
 class Inputs {
     constructor(dataInputsObject) {
         this.dataInputsObject = dataInputsObject;
-        this.inputs = this.createInputObject(dataInputsObject);
+        this.inputs = Inputs.createInputObject(dataInputsObject);
     }
 
-    createInputObject(dataInputObject) {
+    static createInputObject(dataInputObject) {
         const collection = [];
 
         dataInputObject.forEach((obj) => {
