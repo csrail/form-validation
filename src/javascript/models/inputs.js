@@ -9,8 +9,8 @@ class Inputs {
     static createInputObject(dataInputsObject) {
         const collection = [];
 
-        dataInputsObject.forEach((obj) => {
-            collection.push(new Input(obj));
+        dataInputsObject.forEach((dataInputObject) => {
+            collection.push(new Input(dataInputObject));
         });
 
         return collection;
