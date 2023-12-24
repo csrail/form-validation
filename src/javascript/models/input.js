@@ -7,7 +7,7 @@ class Input {
         this.id = inputDataObject.id;
         this.name = inputDataObject.name;
         this.labelObject = new Label(inputDataObject);
-        this.validatorsObject = new Validators(validatorsDataObject);
+        this.validators = new Validators(validatorsDataObject).validators;
     }
 }
 
