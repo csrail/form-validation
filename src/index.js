@@ -1,3 +1,4 @@
+import "./stylesheets/style.css";
 import formData from "./data/data";
 import Form from "./javascript/models/form";
 import Inputs from "./javascript/models/inputs";
