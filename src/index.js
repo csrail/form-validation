@@ -33,17 +33,17 @@ import Fields from "./javascript/models/fields";
         labelElement.textContent = field.label.description;
         labelElement.setAttribute("for", field.label.id);
 
-        const inputElement = document.createElement(field.element);
-        inputElement.type = field.type;
-        inputElement.id = field.id;
-        inputElement.setAttribute("name", field.name);
+        const fieldElement = document.createElement(field.element);
+        fieldElement.type = field.type;
+        fieldElement.id = field.id;
+        fieldElement.setAttribute("name", field.name);
 
         field.validators.forEach((validator) => {
-            inputElement.setAttribute(validator.attribute, validator.value);
+            fieldElement.setAttribute(validator.attribute, validator.value);
         });
 
         labelDivider.appendChild(labelElement);
-        inputDivider.appendChild(inputElement);
+        inputDivider.appendChild(fieldElement);
         component.appendChild(labelDivider);
         component.appendChild(inputDivider);
         fragment.appendChild(component);
