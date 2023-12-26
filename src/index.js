@@ -1,10 +1,10 @@
 import "./stylesheets/style.css";
 import formData from "./data/data";
 import Form from "./javascript/models/form";
-import Inputs from "./javascript/models/inputs";
+import Fields from "./javascript/models/fields";
 
 (() => {
-    const form = new Form(formData, new Inputs(formData.fields));
+    const form = new Form(formData, new Fields(formData.fields));
 
     const fragment = document.createDocumentFragment();
 
@@ -22,7 +22,7 @@ import Inputs from "./javascript/models/inputs";
         }
     });
 
-    form.inputs.forEach((input) => {
+    form.fields.forEach((field) => {
         const component = document.createElement("div");
         component.classList.add("input-line");
 
@@ -30,15 +30,15 @@ import Inputs from "./javascript/models/inputs";
         const inputDivider = document.createElement("div");
 
         const labelElement = document.createElement("label");
-        labelElement.textContent = input.label.description;
-        labelElement.setAttribute("for", input.label.id);
+        labelElement.textContent = field.label.description;
+        labelElement.setAttribute("for", field.label.id);
 
         const inputElement = document.createElement("input");
-        inputElement.type = input.type;
-        inputElement.id = input.id;
-        inputElement.setAttribute("name", input.name);
+        inputElement.type = field.type;
+        inputElement.id = field.id;
+        inputElement.setAttribute("name", field.name);
 
-        input.validators.forEach((validator) => {
+        field.validators.forEach((validator) => {
             inputElement.setAttribute(validator.attribute, validator.value);
         });
 
