@@ -33,7 +33,7 @@ import Fields from "./javascript/models/fields";
         labelElement.textContent = field.label.description;
         labelElement.setAttribute("for", field.label.id);
 
-        const inputElement = document.createElement("input");
+        const inputElement = document.createElement(field.element);
         inputElement.type = field.type;
         inputElement.id = field.id;
         inputElement.setAttribute("name", field.name);
