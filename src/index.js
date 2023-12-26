@@ -4,7 +4,7 @@ import Form from "./javascript/models/form";
 import Inputs from "./javascript/models/inputs";
 
 (() => {
-    const form = new Form(formData, new Inputs(formData.inputs));
+    const form = new Form(formData, new Inputs(formData.fields));
 
     const fragment = document.createDocumentFragment();
 

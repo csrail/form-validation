@@ -1,7 +1,7 @@
 const formData = {
     id: "registration-form",
     name: "registration",
-    inputs: [
+    fields: [
         {
             type: "text",
             id: "input-username",
