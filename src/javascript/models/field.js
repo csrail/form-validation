@@ -7,13 +7,14 @@ class Field {
         this.FieldConstructor = new FieldInterface(
             fieldDataObject.objectType,
         ).constructorType;
-        this.label = new Label(fieldDataObject);
-        this.validators = new Validators(validatorsDataObject).validators;
 
         this.line = new this.FieldConstructor(
             fieldDataObject,
             validatorsDataObject,
         );
+
+        this.label = new Label(fieldDataObject);
+        this.validators = new Validators(validatorsDataObject).validators;
     }
 }
 
