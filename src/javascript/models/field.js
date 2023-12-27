@@ -4,13 +4,16 @@ import FieldInterface from "./fieldInterface";
 
 class Field {
     constructor(fieldDataObject, validatorsDataObject) {
-        this.FieldType = new FieldInterface(
+        this.FieldConstructor = new FieldInterface(
             fieldDataObject.objectType,
         ).constructorType;
         this.label = new Label(fieldDataObject);
         this.validators = new Validators(validatorsDataObject).validators;
 
-        this.line = new this.FieldType(fieldDataObject, validatorsDataObject);
+        this.line = new this.FieldConstructor(
+            fieldDataObject,
+            validatorsDataObject,
+        );
     }
 }
 
