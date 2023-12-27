@@ -34,11 +34,11 @@ import Fields from "./javascript/models/fields";
         labelElement.setAttribute("for", field.label.id);
 
         const fieldElement = document.createElement(field.element);
-        fieldElement.type = field.type;
-        fieldElement.id = field.id;
-        fieldElement.setAttribute("name", field.name);
+        fieldElement.type = field.line.type;
+        fieldElement.id = field.line.id;
+        fieldElement.setAttribute("name", field.line.name);
 
-        field.validators.forEach((validator) => {
+        field.line.validators.forEach((validator) => {
             fieldElement.setAttribute(validator.attribute, validator.value);
         });
 
