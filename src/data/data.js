@@ -3,6 +3,7 @@ const formData = {
     name: "registration",
     fields: [
         {
+            objectType: "input",
             element: "input",
             type: "text",
             id: "input-username",
@@ -20,6 +21,7 @@ const formData = {
             ],
         },
         {
+            objectType: "input",
             element: "input",
             type: "email",
             id: "input-email",
