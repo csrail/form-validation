@@ -7,7 +7,6 @@ class Field {
         this.FieldType = new FieldInterface(
             fieldDataObject.objectType,
         ).constructorType;
-        this.element = fieldDataObject.element;
         this.label = new Label(fieldDataObject);
         this.validators = new Validators(validatorsDataObject).validators;
 
