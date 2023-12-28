@@ -61,7 +61,7 @@ import Select from "./javascript/models/select";
         fieldElement.id = field.line.id;
         fieldElement.setAttribute("name", field.line.name);
 
-        field.line.validators.forEach((validator) => {
+        field.validators.forEach((validator) => {
             fieldElement.setAttribute(validator.attribute, validator.value);
         });
 
