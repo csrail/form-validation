@@ -34,6 +34,19 @@ const formData = {
                 },
             ],
         },
+        {
+            objectType: "select",
+            element: "select",
+            id: "select-country",
+            name: "country",
+            description: "select your country:",
+            validators: [
+                {
+                    attribute: "required",
+                    value: "required",
+                },
+            ],
+        },
     ],
 };
 
