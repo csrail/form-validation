@@ -40,6 +40,20 @@ const formData = {
             id: "select-country",
             name: "country",
             description: "select your country:",
+            options: [
+                {
+                    description: "---",
+                    value: "",
+                },
+                {
+                    description: "New Zealand",
+                    value: "NZ",
+                },
+                {
+                    description: "Australia",
+                    value: "AUS",
+                },
+            ],
             validators: [
                 {
                     attribute: "required",
