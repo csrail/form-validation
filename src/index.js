@@ -2,6 +2,8 @@ import "./stylesheets/style.css";
 import formData from "./data/data";
 import Form from "./javascript/models/form";
 import Fields from "./javascript/models/fields";
+import Input from "./javascript/models/input";
+import Select from "./javascript/models/select";
 
 (() => {
     const form = new Form(formData, new Fields(formData.fields));
@@ -34,7 +36,28 @@ import Fields from "./javascript/models/fields";
         labelElement.setAttribute("for", field.label.id);
 
         const fieldElement = document.createElement(field.line.element);
-        fieldElement.type = field.line.type;
+        if (Object.getPrototypeOf(field.line) === Input.prototype) {
+            fieldElement.type = field.line.type;
+        }
+
+        if (Object.getPrototypeOf(field.line) === Select.prototype) {
+            const optionDefault = document.createElement("option");
+            optionDefault.value = "";
+            optionDefault.textContent = "The default";
+
+            const option1 = document.createElement("option");
+            option1.value = "1";
+            option1.textContent = "one";
+
+            const option2 = document.createElement("option");
+            option2.value = "2";
+            option2.textContent = "two";
+
+            fieldElement.add(optionDefault);
+            fieldElement.add(option1);
+            fieldElement.add(option2);
+        }
+
         fieldElement.id = field.line.id;
         fieldElement.setAttribute("name", field.line.name);
 
