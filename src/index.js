@@ -41,21 +41,13 @@ import Select from "./javascript/models/select";
         }
 
         if (Object.getPrototypeOf(field.line) === Select.prototype) {
-            const optionDefault = document.createElement("option");
-            optionDefault.value = "";
-            optionDefault.textContent = "The default";
+            field.line.options.forEach((option) => {
+                const optionElement = document.createElement("option");
+                optionElement.textContent = option.description;
+                optionElement.value = option.value;
 
-            const option1 = document.createElement("option");
-            option1.value = "1";
-            option1.textContent = "one";
-
-            const option2 = document.createElement("option");
-            option2.value = "2";
-            option2.textContent = "two";
-
-            fieldElement.add(optionDefault);
-            fieldElement.add(option1);
-            fieldElement.add(option2);
+                fieldElement.add(optionElement);
+            });
         }
 
         fieldElement.id = field.line.id;
