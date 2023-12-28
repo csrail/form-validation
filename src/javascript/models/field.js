@@ -8,10 +8,7 @@ class Field {
             fieldDataObject.objectType,
         ).constructorType;
 
-        this.line = new this.FieldConstructor(
-            fieldDataObject,
-            validatorsDataObject,
-        );
+        this.line = new this.FieldConstructor(fieldDataObject);
 
         this.label = new Label(fieldDataObject);
         this.validators = new Validators(validatorsDataObject).validators;
