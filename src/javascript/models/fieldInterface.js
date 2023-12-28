@@ -1,3 +1,4 @@
+import Select from "./select";
 import Input from "./input";
 
 class FieldInterface {
@@ -8,7 +9,7 @@ class FieldInterface {
     static getConstructorType(elementType) {
         const constructors = {
             input: Input,
-            // select: Select,
+            select: Select,
             // textarea: Textarea,
         };
 
