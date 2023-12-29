@@ -80,6 +80,23 @@ const formData = {
                 },
             ],
         },
+        {
+            objectType: "input",
+            element: "input",
+            type: "text",
+            id: "input-zip-code",
+            description: "zip code",
+            validators: [
+                {
+                    attribute: "required",
+                    value: "",
+                },
+                {
+                    attribute: "minlength",
+                    value: 4,
+                },
+            ],
+        },
     ],
 };
 
