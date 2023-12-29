@@ -61,6 +61,25 @@ const formData = {
                 },
             ],
         },
+        {
+            objectType: "input",
+            element: "input",
+            type: "tel",
+            id: "input-phone-number",
+            name: "phone number",
+            description: "phone, (format 123-456-789)",
+            hint: "Format 123-456-789",
+            validators: [
+                {
+                    attribute: "required",
+                    value: "",
+                },
+                {
+                    attribute: "pattern",
+                    value: "[0-9]{3}-[0-9]{4}-[0-9]{3}",
+                },
+            ],
+        },
     ],
 };
 
