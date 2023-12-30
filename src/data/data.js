@@ -110,6 +110,19 @@ const formData = {
                 },
             ],
         },
+        {
+            objectType: "input",
+            element: "input",
+            type: "password",
+            id: "input-password-confirmation",
+            description: "password confirmation",
+            validators: [
+                {
+                    attribute: "required",
+                    value: "",
+                },
+            ],
+        },
     ],
 };
 
