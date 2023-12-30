@@ -102,6 +102,7 @@ const formData = {
             element: "input",
             type: "password",
             id: "input-password",
+            name: "password",
             description: "password",
             validators: [
                 {
@@ -115,6 +116,7 @@ const formData = {
             element: "input",
             type: "password",
             id: "input-password-confirmation",
+            name: "password-confirmation",
             description: "password confirmation",
             validators: [
                 {
