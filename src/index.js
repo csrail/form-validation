@@ -79,5 +79,30 @@ import Select from "./javascript/models/select";
     formElement.append(submitInputElement);
     document.body.appendChild(formElement);
 
+    const passwordInputElement = document.getElementById("input-password");
+    const passwordConfirmationInputElement = document.getElementById(
+        "input-password-confirmation",
+    );
+
+    const passwordHintElement = document.createElement("div");
+    formElement.append(passwordHintElement);
+
+    function checkSamePassword() {
+        if (
+            passwordInputElement.value !==
+            passwordConfirmationInputElement.value
+        ) {
+            passwordHintElement.textContent = "Passwords don't match!";
+        } else {
+            passwordHintElement.textContent = "";
+        }
+    }
+
+    passwordInputElement.addEventListener("change", checkSamePassword);
+    passwordConfirmationInputElement.addEventListener(
+        "input",
+        checkSamePassword,
+    );
+
     return {};
 })();
