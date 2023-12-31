@@ -1,0 +1,7 @@
+.validated:invalid {
+    background-color: #ff8080;
+}
+
+.validated:valid {
+    background-color: #adf6b6;
+}
