@@ -14,6 +14,7 @@ import Select from "./javascript/models/select";
     formElement.id = form.id;
     formElement.setAttribute("method", "POST");
     formElement.setAttribute("action", "#");
+    formElement.setAttribute("novalidate", "");
     formElement.addEventListener("submit", (e) => {
         e.preventDefault();
     });
@@ -55,6 +56,12 @@ import Select from "./javascript/models/select";
 
         field.validators.forEach((validator) => {
             fieldElement.setAttribute(validator.attribute, validator.value);
+        });
+
+        fieldElement.addEventListener("change", (event) => {
+            if (!event.currentTarget.checkValidity()) {
+                event.currentTarget.classList.add("validated");
+            }
         });
 
         labelDivider.appendChild(labelElement);
